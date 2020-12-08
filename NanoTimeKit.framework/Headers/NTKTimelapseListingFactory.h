@@ -6,9 +6,9 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#import "../ClockKit_Private/CLKDevice.h"
+#import "CLKDevice.h"
 
-#import "NTKTimelapseListing.h"
+#import <NanoTimeKit/NTKTimelapseListing.h>
 
 @interface NTKTimelapseListingFactory : NSObject
 

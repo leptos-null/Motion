@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../../ClockKit_Private/CLKDevice.h"
+#import "CLKDevice.h"
 
 @interface NTKEditOption : NSObject <NSSecureCoding>
 

@@ -5,7 +5,7 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "NTKEditOption.h"
+#import <NanoTimeKit/EditOptions/NTKEditOption.h>
 
 @interface NTKValueEditOption : NTKEditOption
 @end

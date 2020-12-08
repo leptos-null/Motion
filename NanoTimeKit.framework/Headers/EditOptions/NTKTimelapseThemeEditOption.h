@@ -5,8 +5,9 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "NTKEnumeratedEditOption.h"
-#import "../NTKTimelapseListing.h"
+
+#import <NanoTimeKit/EditOptions/NTKEnumeratedEditOption.h>
+#import <NanoTimeKit/NTKTimelapseListing.h>
 
 @interface NTKTimelapseThemeEditOption : NTKEnumeratedEditOption
 

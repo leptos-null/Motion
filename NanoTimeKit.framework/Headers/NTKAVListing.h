@@ -5,7 +5,7 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "../ClockKit_Private/CLKVideo.h"
+#import "CLKVideo.h"
 
 @protocol NTKAVListing <NSObject>
 

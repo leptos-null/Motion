@@ -13,6 +13,7 @@
 		FAAC1BC3257F06450020D754 /* MotionExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAAC1BC2257F06450020D754 /* MotionExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAAC1BC9257F06450020D754 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC1BC8257F06450020D754 /* InterfaceController.m */; };
 		FAAC1BCC257F06450020D754 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC1BCB257F06450020D754 /* ExtensionDelegate.m */; };
+		FAAF264F258030B600A4155E /* NanoTimeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAF264D2580307F00A4155E /* NanoTimeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		FAAC1C00257F24830020D754 /* NTKVideoListingFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoListingFactory.h; sourceTree = "<group>"; };
 		FAAC1C07257F24D50020D754 /* NTKVideoPlayerListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoPlayerListing.h; sourceTree = "<group>"; };
 		FAAC1C08257F24E30020D754 /* NTKTimelapseListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKTimelapseListing.h; sourceTree = "<group>"; };
+		FAAF264D2580307F00A4155E /* NanoTimeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NanoTimeKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAF264F258030B600A4155E /* NanoTimeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +125,7 @@
 				FAAC1BB7257F06430020D754 /* Motion */,
 				FAAC1BC6257F06450020D754 /* MotionExt */,
 				FAAC1BB0257F06430020D754 /* Products */,
+				FAAF264E258030B600A4155E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +183,14 @@
 				FAAC1BF4257F240F0020D754 /* CLKVideo.h */,
 			);
 			path = ClockKit_Private;
+			sourceTree = "<group>";
+		};
+		FAAF264E258030B600A4155E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAAF264D2580307F00A4155E /* NanoTimeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +474,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MotionExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,6 +498,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MotionExt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

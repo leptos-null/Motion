@@ -5,7 +5,7 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "NTKVideoListing.h"
+#import <NanoTimeKit/NTKVideoListing.h>
 
 @interface NTKVideoListingFactory : NSObject
 

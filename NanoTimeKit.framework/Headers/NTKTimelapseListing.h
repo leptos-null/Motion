@@ -5,8 +5,8 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "NTKPhotoAnalysis.h"
-#import "NTKAVListing.h"
+#import <NanoTimeKit/NTKPhotoAnalysis.h>
+#import <NanoTimeKit/NTKAVListing.h>
 
 typedef NS_ENUM(NSUInteger, NTKTimelapseTheme) {
     NTKTimelapseThemeMackLake,

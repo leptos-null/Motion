@@ -5,7 +5,7 @@
 //  Created by Leptos on 12/7/20.
 //
 
-#import "NTKAVListing.h"
+#import <NanoTimeKit/NTKAVListing.h>
 
 typedef NS_ENUM(NSUInteger, NTKVideoTheme) {
     NTKVideoThemeButterfly,

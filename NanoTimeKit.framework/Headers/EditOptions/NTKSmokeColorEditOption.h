@@ -5,7 +5,7 @@
 //  Created by Leptos on 12/8/20.
 //
 
-#import "NTKEnumeratedEditOption.h"
+#import <NanoTimeKit/EditOptions/NTKEnumeratedEditOption.h>
 
 typedef NS_ENUM(NSUInteger, NTKSmokeColor) {
     NTKSmokeColorAll,
