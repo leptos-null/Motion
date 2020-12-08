@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAAC1BB4257F06430020D754 /* MotionApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FAAC1BB3257F06430020D754 /* MotionApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAAC1BBA257F06430020D754 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAC1BB8257F06430020D754 /* Interface.storyboard */; };
+		FAAC1BBC257F06440020D754 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAC1BBB257F06440020D754 /* Assets.xcassets */; };
+		FAAC1BC3257F06450020D754 /* MotionExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAAC1BC2257F06450020D754 /* MotionExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAAC1BC9257F06450020D754 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC1BC8257F06450020D754 /* InterfaceController.m */; };
+		FAAC1BCC257F06450020D754 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC1BCB257F06450020D754 /* ExtensionDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAAC1BB5257F06430020D754 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAC1BA9257F06430020D754 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAC1BB2257F06430020D754;
+			remoteInfo = "Motion WatchKit App";
+		};
+		FAAC1BC4257F06450020D754 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAC1BA9257F06430020D754 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAC1BC1257F06450020D754;
+			remoteInfo = "Motion WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAAC1BD8257F06450020D754 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAAC1BC3257F06450020D754 /* MotionExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAC1BDC257F06450020D754 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FAAC1BB4257F06430020D754 /* MotionApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA024F8F257F4E05001A45C8 /* NTKEnumeratedEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKEnumeratedEditOption.h; sourceTree = "<group>"; };
+		FA024F91257F4E1D001A45C8 /* NTKTimelapseThemeEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKTimelapseThemeEditOption.h; sourceTree = "<group>"; };
+		FA024F92257F4E54001A45C8 /* NTKVideoThemeEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoThemeEditOption.h; sourceTree = "<group>"; };
+		FA024F93257F4E8A001A45C8 /* NTKValueEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKValueEditOption.h; sourceTree = "<group>"; };
+		FA024F94257F4EAD001A45C8 /* NTKEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKEditOption.h; sourceTree = "<group>"; };
+		FA024F98257FD230001A45C8 /* NTKFireWaterColorEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKFireWaterColorEditOption.h; sourceTree = "<group>"; };
+		FA024F9C257FD293001A45C8 /* NTKMetallicColorEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKMetallicColorEditOption.h; sourceTree = "<group>"; };
+		FA024FA3257FD30D001A45C8 /* NTKSmokeColorEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKSmokeColorEditOption.h; sourceTree = "<group>"; };
+		FAAC1BAF257F06430020D754 /* Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC1BB3257F06430020D754 /* MotionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC1BB9257F06430020D754 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FAAC1BBB257F06440020D754 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAAC1BBD257F06440020D754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAC1BC2257F06450020D754 /* MotionExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MotionExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAC1BC7257F06450020D754 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		FAAC1BC8257F06450020D754 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		FAAC1BCA257F06450020D754 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		FAAC1BCB257F06450020D754 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		FAAC1BD2257F06450020D754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAC1BE6257F06710020D754 /* NTKPhotoAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKPhotoAnalysis.h; sourceTree = "<group>"; };
+		FAAC1BEB257F23580020D754 /* NTKTimelapseListingFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKTimelapseListingFactory.h; sourceTree = "<group>"; };
+		FAAC1BEF257F237D0020D754 /* CLKDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKDevice.h; sourceTree = "<group>"; };
+		FAAC1BF4257F240F0020D754 /* CLKVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLKVideo.h; sourceTree = "<group>"; };
+		FAAC1BF8257F242F0020D754 /* NTKAVListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKAVListing.h; sourceTree = "<group>"; };
+		FAAC1BFC257F24500020D754 /* NTKVideoListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoListing.h; sourceTree = "<group>"; };
+		FAAC1C00257F24830020D754 /* NTKVideoListingFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoListingFactory.h; sourceTree = "<group>"; };
+		FAAC1C07257F24D50020D754 /* NTKVideoPlayerListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoPlayerListing.h; sourceTree = "<group>"; };
+		FAAC1C08257F24E30020D754 /* NTKTimelapseListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKTimelapseListing.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAAC1BBF257F06450020D754 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA024F90257F4E0D001A45C8 /* EditOptions */ = {
+			isa = PBXGroup;
+			children = (
+				FA024F94257F4EAD001A45C8 /* NTKEditOption.h */,
+				FA024F93257F4E8A001A45C8 /* NTKValueEditOption.h */,
+				FA024F8F257F4E05001A45C8 /* NTKEnumeratedEditOption.h */,
+				FA024F91257F4E1D001A45C8 /* NTKTimelapseThemeEditOption.h */,
+				FA024F92257F4E54001A45C8 /* NTKVideoThemeEditOption.h */,
+				FA024F98257FD230001A45C8 /* NTKFireWaterColorEditOption.h */,
+				FA024F9C257FD293001A45C8 /* NTKMetallicColorEditOption.h */,
+				FA024FA3257FD30D001A45C8 /* NTKSmokeColorEditOption.h */,
+			);
+			path = EditOptions;
+			sourceTree = "<group>";
+		};
+		FAAC1BA8257F06430020D754 = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BE7257F06770020D754 /* NanoTimeKit */,
+				FAAC1BF0257F23810020D754 /* ClockKit_Private */,
+				FAAC1BB7257F06430020D754 /* Motion */,
+				FAAC1BC6257F06450020D754 /* MotionExt */,
+				FAAC1BB0257F06430020D754 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAAC1BB0257F06430020D754 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BAF257F06430020D754 /* Motion.app */,
+				FAAC1BB3257F06430020D754 /* MotionApp.app */,
+				FAAC1BC2257F06450020D754 /* MotionExt.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAAC1BB7257F06430020D754 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BB8257F06430020D754 /* Interface.storyboard */,
+				FAAC1BBB257F06440020D754 /* Assets.xcassets */,
+				FAAC1BBD257F06440020D754 /* Info.plist */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
+		FAAC1BC6257F06450020D754 /* MotionExt */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BCA257F06450020D754 /* ExtensionDelegate.h */,
+				FAAC1BCB257F06450020D754 /* ExtensionDelegate.m */,
+				FAAC1BC7257F06450020D754 /* InterfaceController.h */,
+				FAAC1BC8257F06450020D754 /* InterfaceController.m */,
+				FAAC1BD2257F06450020D754 /* Info.plist */,
+			);
+			path = MotionExt;
+			sourceTree = "<group>";
+		};
+		FAAC1BE7257F06770020D754 /* NanoTimeKit */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BF8257F242F0020D754 /* NTKAVListing.h */,
+				FAAC1BE6257F06710020D754 /* NTKPhotoAnalysis.h */,
+				FAAC1C07257F24D50020D754 /* NTKVideoPlayerListing.h */,
+				FAAC1C08257F24E30020D754 /* NTKTimelapseListing.h */,
+				FAAC1BEB257F23580020D754 /* NTKTimelapseListingFactory.h */,
+				FAAC1BFC257F24500020D754 /* NTKVideoListing.h */,
+				FAAC1C00257F24830020D754 /* NTKVideoListingFactory.h */,
+				FA024F90257F4E0D001A45C8 /* EditOptions */,
+			);
+			path = NanoTimeKit;
+			sourceTree = "<group>";
+		};
+		FAAC1BF0257F23810020D754 /* ClockKit_Private */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC1BEF257F237D0020D754 /* CLKDevice.h */,
+				FAAC1BF4257F240F0020D754 /* CLKVideo.h */,
+			);
+			path = ClockKit_Private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAAC1BAE257F06430020D754 /* Motion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAC1BDD257F06450020D754 /* Build configuration list for PBXNativeTarget "Motion" */;
+			buildPhases = (
+				FAAC1BAD257F06430020D754 /* Resources */,
+				FAAC1BDC257F06450020D754 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAC1BB6257F06430020D754 /* PBXTargetDependency */,
+			);
+			name = Motion;
+			productName = Motion;
+			productReference = FAAC1BAF257F06430020D754 /* Motion.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		FAAC1BB2257F06430020D754 /* MotionApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAC1BD9257F06450020D754 /* Build configuration list for PBXNativeTarget "MotionApp" */;
+			buildPhases = (
+				FAAC1BB1257F06430020D754 /* Resources */,
+				FAAC1BD8257F06450020D754 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAC1BC5257F06450020D754 /* PBXTargetDependency */,
+			);
+			name = MotionApp;
+			productName = "Motion WatchKit App";
+			productReference = FAAC1BB3257F06430020D754 /* MotionApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FAAC1BC1257F06450020D754 /* MotionExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAC1BD5257F06450020D754 /* Build configuration list for PBXNativeTarget "MotionExt" */;
+			buildPhases = (
+				FAAC1BBE257F06450020D754 /* Sources */,
+				FAAC1BBF257F06450020D754 /* Frameworks */,
+				FAAC1BC0257F06450020D754 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionExt;
+			productName = "Motion WatchKit Extension";
+			productReference = FAAC1BC2257F06450020D754 /* MotionExt.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAAC1BA9257F06430020D754 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Leptos;
+				TargetAttributes = {
+					FAAC1BAE257F06430020D754 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					FAAC1BB2257F06430020D754 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					FAAC1BC1257F06450020D754 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = FAAC1BAC257F06430020D754 /* Build configuration list for PBXProject "Motion" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAAC1BA8257F06430020D754;
+			productRefGroup = FAAC1BB0257F06430020D754 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAAC1BAE257F06430020D754 /* Motion */,
+				FAAC1BB2257F06430020D754 /* MotionApp */,
+				FAAC1BC1257F06450020D754 /* MotionExt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAAC1BAD257F06430020D754 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAC1BB1257F06430020D754 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAC1BBC257F06440020D754 /* Assets.xcassets in Resources */,
+				FAAC1BBA257F06430020D754 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAC1BC0257F06450020D754 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAAC1BBE257F06450020D754 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAC1BCC257F06450020D754 /* ExtensionDelegate.m in Sources */,
+				FAAC1BC9257F06450020D754 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAAC1BB6257F06430020D754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAC1BB2257F06430020D754 /* MotionApp */;
+			targetProxy = FAAC1BB5257F06430020D754 /* PBXContainerItemProxy */;
+		};
+		FAAC1BC5257F06450020D754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAC1BC1257F06450020D754 /* MotionExt */;
+			targetProxy = FAAC1BC4257F06450020D754 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAAC1BB8257F06430020D754 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAC1BB9257F06430020D754 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAAC1BD3257F06450020D754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		FAAC1BD4257F06450020D754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		FAAC1BD6257F06450020D754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				INFOPLIST_FILE = MotionExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		FAAC1BD7257F06450020D754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				INFOPLIST_FILE = MotionExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		FAAC1BDA257F06450020D754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				IBSC_MODULE = Motion_WatchKit_Extension;
+				INFOPLIST_FILE = Motion/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		FAAC1BDB257F06450020D754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				IBSC_MODULE = Motion_WatchKit_Extension;
+				INFOPLIST_FILE = Motion/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		FAAC1BDE257F06450020D754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAAC1BDF257F06450020D754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7P56K8K4MY;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = null.leptos.Motion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAAC1BAC257F06430020D754 /* Build configuration list for PBXProject "Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAC1BD3257F06450020D754 /* Debug */,
+				FAAC1BD4257F06450020D754 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAC1BD5257F06450020D754 /* Build configuration list for PBXNativeTarget "MotionExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAC1BD6257F06450020D754 /* Debug */,
+				FAAC1BD7257F06450020D754 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAC1BD9257F06450020D754 /* Build configuration list for PBXNativeTarget "MotionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAC1BDA257F06450020D754 /* Debug */,
+				FAAC1BDB257F06450020D754 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAC1BDD257F06450020D754 /* Build configuration list for PBXNativeTarget "Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAC1BDE257F06450020D754 /* Debug */,
+				FAAC1BDF257F06450020D754 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAAC1BA9257F06430020D754 /* Project object */;
+}

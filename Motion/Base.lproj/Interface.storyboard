@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+    </dependencies>
+    <scenes>
+        <!--Motion-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="main" title="Motion" contentMode="scaleAspectFill" spacing="0.0" fullScreen="YES" id="AgC-eL-Hgc" userLabel="Motion" customClass="InterfaceController">
+                    <items>
+                        <inlineMovie alignment="center" verticalAlignment="center" id="kVg-oz-Fh4"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="inlineMovie" destination="kVg-oz-Fh4" id="f7g-KI-jVZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-181" y="-6"/>
+        </scene>
+    </scenes>
+</document>
