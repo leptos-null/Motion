@@ -65,71 +65,63 @@ FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name
         } break;
             
         case InterfaceThemeFireWaterFire: {
-            UIColor *color = [UIColor colorWithRed:0.737255 green:0.419608 blue:0.227451 alpha:1];
             NTKFireWaterColor firewaterColor = theme - InterfaceThemeFireWaterSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-FireWater-Fullscreen-Fire", device);
             // "Fire_Fullscreen_008", "Fire_Fullscreen_008_Calm"
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Fire_Fullscreen_008_Calm" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Fire_Fullscreen_008_Calm"];
             editOption = [NTKFireWaterColorEditOption optionWithColor:firewaterColor forDevice:device];
         } break;
         case InterfaceThemeFireWaterWater: {
-            UIColor *color = [UIColor colorWithRed:0.694118 green:0.690196 blue:0.717647 alpha:1];
             NTKFireWaterColor firewaterColor = theme - InterfaceThemeFireWaterSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-FireWater-Fullscreen-Water", device);
             // "Water_Fullscreen_005", "Water_Fullscreen_005_Edge"
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Water_Fullscreen_005_Edge" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Water_Fullscreen_005_Edge"];
             editOption = [NTKFireWaterColorEditOption optionWithColor:firewaterColor forDevice:device];
         } break;
             
         case InterfaceThemeMetallicSilver: {
-            UIColor *color = [UIColor colorWithRed:0.694118 green:0.690196 blue:0.717647 alpha:1];
             NTKMetallicColor metallicColor = theme - InterfaceThemeMetallicSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Metallic-Fullscreen-Silver", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_Silver_003" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_Silver_003"];
             editOption = [NTKMetallicColorEditOption optionWithColor:metallicColor forDevice:device];
         } break;
         case InterfaceThemeMetallicBlack: {
-            UIColor *color = [UIColor colorWithRed:0.694118 green:0.690196 blue:0.717647 alpha:1];
             NTKMetallicColor metallicColor = theme - InterfaceThemeMetallicSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Metallic-Fullscreen-Black", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_GunMetal_003" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_GunMetal_003"];
             editOption = [NTKMetallicColorEditOption optionWithColor:metallicColor forDevice:device];
         } break;
         case InterfaceThemeMetallicGold: {
-            UIColor *color = [UIColor colorWithRed:0.705882 green:0.517647 blue:0.407843 alpha:1];
             NTKMetallicColor metallicColor = theme - InterfaceThemeMetallicSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Metallic-Fullscreen-Gold", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_Rose_003" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_Rose_003"];
             editOption = [NTKMetallicColorEditOption optionWithColor:metallicColor forDevice:device];
         } break;
             
         case InterfaceThemeSmokeBlueGreen: {
-            UIColor *color = [UIColor colorWithRed:0.705882 green:0.517647 blue:0.407843 alpha:1];
             NTKSmokeColor smokeColor = theme - InterfaceThemeSmokeSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Smoke-Fullscreen-BlueGreen", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Spearmint_007" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Spearmint_007"];
             editOption = [NTKSmokeColorEditOption optionWithColor:smokeColor forDevice:device];
         } break;
         case InterfaceThemeSmokePinkOrange: {
-            UIColor *color = [UIColor colorWithRed:0.894118 green:0.372549 blue:0.305882 alpha:1];
             NTKSmokeColor smokeColor = theme - InterfaceThemeSmokeSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Smoke-Fullscreen-PinkOrange", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Citrus_007" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Citrus_007"];
             editOption = [NTKSmokeColorEditOption optionWithColor:smokeColor forDevice:device];
         } break;
         case InterfaceThemeSmokeBlackWhite: {
-            UIColor *color = [UIColor colorWithRed:0.694118 green:0.690196 blue:0.717647 alpha:1];
             NTKSmokeColor smokeColor = theme - InterfaceThemeSmokeSTART;
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Smoke-Fullscreen-BlackWhite", device);
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Neutral_007" andColor:color];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Neutral_007"];
             editOption = [NTKSmokeColorEditOption optionWithColor:smokeColor forDevice:device];
         } break;
             
