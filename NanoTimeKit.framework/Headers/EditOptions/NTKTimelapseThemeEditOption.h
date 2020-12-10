@@ -5,7 +5,6 @@
 //  Created by Leptos on 12/7/20.
 //
 
-
 #import <NanoTimeKit/EditOptions/NTKEnumeratedEditOption.h>
 #import <NanoTimeKit/NTKTimelapseListing.h>
 

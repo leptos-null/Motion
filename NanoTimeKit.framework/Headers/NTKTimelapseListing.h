@@ -23,6 +23,8 @@ typedef NS_ENUM(NSUInteger, NTKTimelapseTheme) {
 @property (readonly, nonatomic) NSInteger videoIndex;
 @property (readonly, nonatomic) NTKPhotoAnalysis *photoAnalysis;
 
+- (instancetype)initForDevice:(CLKDevice *)device withTheme:(NTKTimelapseTheme)theme videoIndex:(NSInteger)videoIndex photoAnalysis:(NTKPhotoAnalysis *)photoAnalysis;
+
 - (BOOL)isSimilarTo:(NTKTimelapseListing *)other;
 
 @end

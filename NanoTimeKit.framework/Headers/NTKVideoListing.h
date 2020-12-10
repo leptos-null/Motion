@@ -16,11 +16,22 @@ typedef NS_ENUM(NSUInteger, NTKVideoTheme) {
 @interface NTKVideoListing : NSObject <NSCopying, NTKAVListing>
 
 @property (readonly, nonatomic) NTKVideoTheme theme;
+// Butterfly: {1..25}
+// Jellyfish: {26..44}
+// Flower:    {45..52}
 @property (readonly, nonatomic) NSInteger variant;
+// Butterfly: {1..4}
+// Jellyfish: {1}
+// Flower:    {1}
 @property (readonly, nonatomic) NSInteger clip;
 
 @property (readonly, nonatomic) UIColor *overlayColor;
 
+// return (tags & tag) == tag
+// known tags:
+//   100
+//   011
+//   010
 - (BOOL)hasTag:(NSUInteger)tag;
 
 @end
