@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -11,7 +11,15 @@
             <objects>
                 <controller identifier="main" title="Motion" contentMode="scaleAspectFill" spacing="0.0" fullScreen="YES" id="AgC-eL-Hgc" userLabel="Motion" customClass="InterfaceController">
                     <items>
-                        <inlineMovie alignment="center" verticalAlignment="center" id="kVg-oz-Fh4"/>
+                        <inlineMovie alignment="center" verticalAlignment="center" autoplays="NO" id="kVg-oz-Fh4">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="pVd-7Y-vXI">
+                                    <connections>
+                                        <action selector="movieTapGesture:" destination="AgC-eL-Hgc" id="1ZW-2X-f4e"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </inlineMovie>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>

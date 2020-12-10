@@ -19,8 +19,17 @@
 #import <NanoTimeKit/EditOptions/NTKMetallicColorEditOption.h>
 #import <NanoTimeKit/EditOptions/NTKSmokeColorEditOption.h>
 
-FOUNDATION_EXTERN NSString *UISystemRootDirectory(void);
 FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name, CLKDevice *device);
+
+NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
+    if (x < min) {
+        return max;
+    }
+    if (x > max) {
+        return min;
+    }
+    return x;
+}
 
 @implementation InterfaceController
 
@@ -30,6 +39,62 @@ FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name
 
 - (void)setTheme:(InterfaceTheme)theme {
     _theme = theme;
+    _variant = 0; // use 0 as a default value
+    
+    [self _reloadFromThemeVariant];
+}
+
+- (void)setVariant:(NSInteger)variant {
+    if (variant == self.variant) {
+        return;
+    }
+    switch (self.theme) {
+        case InterfaceThemeVideoButterfly:
+            variant = NSIntegerRotate(1, variant, 25);
+            break;
+        case InterfaceThemeVideoJellyfish:
+            variant = NSIntegerRotate(26, variant, 44);
+            break;
+        case InterfaceThemeVideoFlower:
+            variant = NSIntegerRotate(45, variant, 52);
+            break;
+            
+        case InterfaceThemeTimelapseMackLake:
+            variant = NSIntegerRotate(1, variant, 22);
+            break;
+        case InterfaceThemeTimelapseNewYork:
+            variant = NSIntegerRotate(1, variant, 20);
+            break;
+        case InterfaceThemeTimelapseHongKong:
+            variant = NSIntegerRotate(1, variant, 26);
+            break;
+        case InterfaceThemeTimelapseLondon:
+            variant = NSIntegerRotate(1, variant, 16);
+            break;
+        case InterfaceThemeTimelapseParis:
+            variant = NSIntegerRotate(1, variant, 17);
+            break;
+        case InterfaceThemeTimelapseShanghai:
+            variant = NSIntegerRotate(1, variant, 22);
+            break;
+            
+        case InterfaceThemeFireWaterFire:
+        case InterfaceThemeFireWaterWater:
+            variant = NSIntegerRotate(1, variant, 2);
+            break;
+        default:
+            variant = 1;
+            break;
+    }
+    
+    _variant = variant;
+    
+    [self _reloadFromThemeVariant];
+}
+
+- (void)_reloadFromThemeVariant {
+    InterfaceTheme theme = self.theme;
+    NSInteger variant = self.variant;
     
     CLKDevice *device = [CLKDevice currentDevice];
     
@@ -43,8 +108,18 @@ FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name
             NTKVideoListingFactory *videoFactory = [NTKVideoListingFactory sharedInstanceForDevice:device];
             NTKVideoTheme videoTheme = theme - (InterfaceThemeVideoSTART + 1);
             
-            posterImage = [videoFactory posterImageWithTheme:videoTheme];
-            listing = [videoFactory defaultListingWithTheme:videoTheme];
+            if (variant == 0) {
+                NTKVideoListing *videoListing = [videoFactory defaultListingWithTheme:videoTheme];
+                
+                posterImage = [videoFactory posterImageWithTheme:videoTheme];
+                listing = videoListing;
+                _variant = videoListing.variant;
+            } else {
+                // we don't want the default poster to flash between videos, show black instead
+                // "motion-black" assets seem to be missing on some devices?
+                posterImage = NTKImageNamedFromAssetsBundleForDevice(@"motion-black", device);
+                listing = [videoFactory anyListingWithTheme:videoTheme variant:variant tag:0];
+            }
             editOption = [NTKVideoThemeEditOption optionWithVideoTheme:videoTheme forDevice:device];
         } break;
         case InterfaceThemeTimelapseMackLake:
@@ -55,29 +130,60 @@ FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name
         case InterfaceThemeTimelapseShanghai: {
             NTKTimelapseListingFactory *timelapseFactory = [NTKTimelapseListingFactory sharedInstanceForDevice:device];
             NTKTimelapseTheme timelapseTheme = theme - (InterfaceThemeTimelapseSTART + 1);
+            NTKTimelapseThemeEditOption *timelapseEditOption = [NTKTimelapseThemeEditOption optionWithTimelapseTheme:timelapseTheme forDevice:device];
             
-            NSDate *date = [NSDate date];
-            CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(+37.3, -122); // Apple Park
-            
-            posterImage = [timelapseFactory posterImageWithTheme:timelapseTheme];
-            listing = [timelapseFactory listingWithTheme:timelapseTheme date:date location:coord];
-            editOption = [NTKTimelapseThemeEditOption optionWithTimelapseTheme:timelapseTheme forDevice:device];
+            NTKTimelapseListing *timelapseListing = nil;
+            if (variant == 0) {
+                NSDate *date = [NSDate date];
+                CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(+37.3, -122); // Apple Park
+                
+                timelapseListing = [timelapseFactory listingWithTheme:timelapseTheme date:date location:coord];
+                
+                listing = timelapseListing;
+                _variant = timelapseListing.videoIndex;
+            } else {
+                timelapseListing = [[NTKTimelapseListing alloc] initForDevice:device withTheme:timelapseTheme videoIndex:variant photoAnalysis:nil];
+            }
+            // timelapseFactory.posterImageWithTheme has a similar problem to Video,
+            //   where the poster is going to flash when incrementing the videoIndex.
+            // to make this more seemless, use the image associated with the listing
+            NSString *resourceName = [timelapseEditOption resourceNameWithVideoIndex:timelapseListing.videoIndex];
+            // timelapseFactory.heroImageWithTheme uses "-hero" only, which is too small
+            posterImage = NTKImageNamedFromAssetsBundleForDevice([resourceName stringByAppendingString:@"-hero-all-alchemy"], device);
+            listing = timelapseListing;
+            editOption = timelapseEditOption;
         } break;
             
         case InterfaceThemeFireWaterFire: {
             NTKFireWaterColor firewaterColor = theme - InterfaceThemeFireWaterSTART;
+            NSString *filename = nil;
+            switch (variant) {
+                case 1:
+                    filename = @"Fire_Fullscreen_008";
+                    break;
+                default:
+                    filename = @"Fire_Fullscreen_008_Calm";
+                    break;
+            }
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-FireWater-Fullscreen-Fire", device);
-            // "Fire_Fullscreen_008", "Fire_Fullscreen_008_Calm"
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Fire_Fullscreen_008_Calm"];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:filename];
             editOption = [NTKFireWaterColorEditOption optionWithColor:firewaterColor forDevice:device];
         } break;
         case InterfaceThemeFireWaterWater: {
             NTKFireWaterColor firewaterColor = theme - InterfaceThemeFireWaterSTART;
+            NSString *filename = nil;
+            switch (variant) {
+                case 1:
+                    filename = @"Water_Fullscreen_005";
+                    break;
+                default:
+                    filename = @"Water_Fullscreen_005_Edge";
+                    break;
+            }
             
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-FireWater-Fullscreen-Water", device);
-            // "Water_Fullscreen_005", "Water_Fullscreen_005_Edge"
-            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Water_Fullscreen_005_Edge"];
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:filename];
             editOption = [NTKFireWaterColorEditOption optionWithColor:firewaterColor forDevice:device];
         } break;
             
@@ -147,6 +253,14 @@ FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name
 
 - (void)willDisappear {
     [self.inlineMovie pause];
+}
+
+- (IBAction)movieTapGesture:(WKTapGestureRecognizer *)sender {
+    if (sender.state != WKGestureRecognizerStateEnded) {
+        return;
+    }
+    self.variant++;
+    [self.inlineMovie playFromBeginning];
 }
 
 @end

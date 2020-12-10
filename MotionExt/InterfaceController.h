@@ -6,9 +6,7 @@
 //  Copyright 2020 Leptos. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <WatchKit/WatchKit.h>
-#import <dlfcn.h>
 
 typedef NS_ENUM(NSUInteger, InterfaceTheme) {
     InterfaceThemeVideoSTART, // add 1
@@ -45,6 +43,8 @@ typedef NS_ENUM(NSUInteger, InterfaceTheme) {
 @interface InterfaceController : WKInterfaceController
 
 @property (nonatomic) InterfaceTheme theme;
+@property (nonatomic) NSInteger variant;
+
 @property (strong, nonatomic) IBOutlet WKInterfaceInlineMovie *inlineMovie;
 
 @end
