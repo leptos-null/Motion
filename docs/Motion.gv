@@ -1,0 +1,19 @@
+digraph Motion {
+    Listing -> {Video, Timelapse, FireWater, Metallic, Smoke}
+        Video -> {Butterfly, Jellyfish, Flower}
+            Butterfly -> "25 variants" -> "4 clips"
+            Jellyfish -> "19 variants" -> "1 clip"
+            Flower -> "8 variants" -> "1 clip"
+        Timelapse -> {MackLake, NewYork, HongKong, London, Paris, Shanghai}
+            MackLake -> "22 clips"
+            NewYork -> "20 clips"
+            HongKong -> "26 clips"
+            London -> "16 clips"
+            Paris -> "17 clips"
+            Shanghai -> "22 clips"
+        FireWater -> {Fire, Water}
+            Fire -> "2 variants"
+            Water -> "2 variants"
+        Metallic -> {Silver, Black, Gold}
+        Smoke -> {"Blue/Green", "Pink/Orange", "Black/White"}
+}
