@@ -1,5 +1,5 @@
 digraph Motion {
-    Listing -> {Video, Timelapse, Infinity, FireWater, Metallic, Smoke}
+    Listing -> {Video, Timelapse, Infinity, FireWater, Metallic, Smoke, Breathe}
         Video -> {Butterfly, Jellyfish, Flower}
             Butterfly -> "25 variants" -> "4 clips"
             Jellyfish -> "19 variants" -> "1 clip"
@@ -21,4 +21,6 @@ digraph Motion {
             Water -> "2 variants"
         Metallic -> {Silver, Black, Gold}
         Smoke -> {"Blue/Green", "Pink/Orange", "Black/White"}
+        Breathe -> {Classic, Calm, Focus}
+            Calm -> "5 variants"
 }

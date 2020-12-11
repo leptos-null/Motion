@@ -92,6 +92,7 @@
 		FAAF289D2582970800B7F7AF /* NTKInfinityListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityListing.h; path = NanoTimeKit.framework/Headers/NTKInfinityListing.h; sourceTree = SOURCE_ROOT; };
 		FAAF28A1258299DF00B7F7AF /* NTKInfinityStyleEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityStyleEditOption.h; path = NanoTimeKit.framework/Headers/EditOptions/NTKInfinityStyleEditOption.h; sourceTree = SOURCE_ROOT; };
 		FAAF28A52582E1C900B7F7AF /* NTKInfinityListingAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityListingAttributes.h; path = NanoTimeKit.framework/Headers/NTKInfinityListingAttributes.h; sourceTree = SOURCE_ROOT; };
+		FAAF28A92583E0A000B7F7AF /* NTKBreatheVideoStyleEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKBreatheVideoStyleEditOption.h; path = NanoTimeKit.framework/Headers/EditOptions/NTKBreatheVideoStyleEditOption.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				FA024F98257FD230001A45C8 /* NTKFireWaterColorEditOption.h */,
 				FA024F9C257FD293001A45C8 /* NTKMetallicColorEditOption.h */,
 				FA024FA3257FD30D001A45C8 /* NTKSmokeColorEditOption.h */,
+				FAAF28A92583E0A000B7F7AF /* NTKBreatheVideoStyleEditOption.h */,
 				FAAF28A1258299DF00B7F7AF /* NTKInfinityStyleEditOption.h */,
 			);
 			path = EditOptions;
