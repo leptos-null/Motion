@@ -34,6 +34,10 @@
         @(InterfaceThemeSmokeBlueGreen),
         @(InterfaceThemeSmokePinkOrange),
         @(InterfaceThemeSmokeBlackWhite),
+        
+        @(InterfaceThemeBreatheClassic),
+        @(InterfaceThemeBreatheCalm),
+        @(InterfaceThemeBreatheFocus),
     ];
     
     NSUInteger contextCount = contexts.count;

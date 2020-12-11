@@ -37,7 +37,12 @@ typedef NS_ENUM(NSUInteger, InterfaceTheme) {
     InterfaceThemeSmokeAll = InterfaceThemeSmokeSTART,
     InterfaceThemeSmokeBlueGreen,
     InterfaceThemeSmokePinkOrange,
-    InterfaceThemeSmokeBlackWhite
+    InterfaceThemeSmokeBlackWhite,
+    
+    InterfaceThemeBreatheSTART, // add 1
+    InterfaceThemeBreatheClassic,
+    InterfaceThemeBreatheCalm,
+    InterfaceThemeBreatheFocus,
 };
 
 @interface InterfaceController : WKInterfaceController

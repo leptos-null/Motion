@@ -18,6 +18,7 @@
 #import <NanoTimeKit/EditOptions/NTKFireWaterColorEditOption.h>
 #import <NanoTimeKit/EditOptions/NTKMetallicColorEditOption.h>
 #import <NanoTimeKit/EditOptions/NTKSmokeColorEditOption.h>
+#import <NanoTimeKit/EditOptions/NTKBreatheVideoStyleEditOption.h>
 
 FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name, CLKDevice *device);
 
@@ -82,6 +83,11 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
         case InterfaceThemeFireWaterWater:
             variant = NSIntegerRotate(1, variant, 2);
             break;
+            
+        case InterfaceThemeBreatheCalm:
+            variant = NSIntegerRotate(1, variant, 5);
+            break;
+            
         default:
             variant = 1;
             break;
@@ -229,6 +235,52 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Smoke-Fullscreen-BlackWhite", device);
             listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Neutral_007"];
             editOption = [NTKSmokeColorEditOption optionWithColor:smokeColor forDevice:device];
+        } break;
+            
+        case InterfaceThemeBreatheClassic: {
+            NTKBreatheVideoStyle breatheStyle = theme - (InterfaceThemeBreatheSTART + 1);
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Breathe-Flower", device);
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Breathe_Flower"];
+            editOption = [NTKBreatheVideoStyleEditOption optionWithStyle:breatheStyle forDevice:device];
+        } break;
+        case InterfaceThemeBreatheCalm: {
+            NTKBreatheVideoStyle breatheStyle = theme - (InterfaceThemeBreatheSTART + 1);
+            // creating these strings with formatters should be trivial,
+            // however I have decided on this method to best represent the original code
+            NSString *filename = nil;
+            switch (variant) {
+                case 1:
+                    filename = @"Breathe_Bokeh_01";
+                    break;
+                case 2:
+                    filename = @"Breathe_Bokeh_02";
+                    break;
+                case 3:
+                    filename = @"Breathe_Bokeh_03";
+                    break;
+                case 4:
+                    filename = @"Breathe_Bokeh_04";
+                    break;
+                case 5:
+                    // this has to do with my decision to have a default for each theme,
+                    //   not because this theme actually has a default
+                    //   (a default is not expressed in the original code)
+                default:
+                    filename = @"Breathe_Bokeh_05";
+                    break;
+            }
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Breathe-Bokeh", device);
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:filename];
+            editOption = [NTKBreatheVideoStyleEditOption optionWithStyle:breatheStyle forDevice:device];
+        } break;
+        case InterfaceThemeBreatheFocus: {
+            NTKBreatheVideoStyle breatheStyle = theme - (InterfaceThemeBreatheSTART + 1);
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Breathe-Rings", device);
+            listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Breathe_Rings"];
+            editOption = [NTKBreatheVideoStyleEditOption optionWithStyle:breatheStyle forDevice:device];
         } break;
             
         default:
