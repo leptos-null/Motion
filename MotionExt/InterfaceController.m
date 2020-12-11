@@ -99,8 +99,8 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
 }
 
 - (void)_reloadFromThemeVariant {
-    InterfaceTheme theme = self.theme;
-    NSInteger variant = self.variant;
+    InterfaceTheme const theme = self.theme;
+    NSInteger const variant = self.variant;
     
     CLKDevice *device = [CLKDevice currentDevice];
     
@@ -287,26 +287,27 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             break;
     }
     
-    self.inlineMovie.posterImage = [WKImage imageWithImage:posterImage];
-    self.inlineMovie.movieURL = listing.video.url;
-    self.title = editOption.localizedName;
+    if (theme != InterfaceThemeNone) { // we do want to clear everything
+        // technically, we only need a posterImage the first time
+        NSAssert(posterImage != nil || variant != 0, @"posterImage should be set");
+        NSAssert(listing != nil, @"listing should be set (theme: %lu, variant: %ld)", (unsigned long)theme, (long)variant);
+        NSAssert(editOption != nil, @"editOption should be set (theme: %lu, variant: %ld)", (unsigned long)theme, (long)variant);
+    }
+    WKInterfaceInlineMovie *inlineMovie = self.inlineMovie;
+    NSString *localizedName = editOption.localizedName;
+    
+    inlineMovie.posterImage = [WKImage imageWithImage:posterImage];
+    inlineMovie.movieURL = listing.video.url;
+    inlineMovie.accessibilityValue = localizedName;
+    
+    self.title = localizedName;
 }
 
 - (void)didAppear {
     // inspired by github.com/steventroughtonsmith/SpriteKitWatchFace
     id app = [NSClassFromString(@"UIApplication") valueForKey:@"sharedApplication"];
-    id rootViewController = [app valueForKeyPath:@"keyWindow.rootViewController"];
     id statusbarLayer = [app valueForKeyPath:@"statusBar.layer"];
-    id navbarLayer = [rootViewController valueForKeyPath:@"navigationBar.layer"];
-    
-    NSArray *childViewControllers = [rootViewController valueForKey:@"childViewControllers"];
-    for (id subview in [childViewControllers.firstObject valueForKeyPath:@"view.subviews"]) {
-        if ([subview isKindOfClass:NSClassFromString(@"PUICPageIndicatorView")]) {
-            // the page indicators, if there are multiple horizontal controllers
-            id subviewLayer = [subview valueForKey:@"layer"];
-            [subviewLayer setOpacity:0];
-        }
-    }
+    id navbarLayer = [app valueForKeyPath:@"keyWindow.rootViewController.navigationBar.layer"];
     [statusbarLayer setOpacity:0];
     [navbarLayer setOpacity:0];
     

@@ -9,6 +9,8 @@
 #import <WatchKit/WatchKit.h>
 
 typedef NS_ENUM(NSUInteger, InterfaceTheme) {
+    InterfaceThemeNone,
+    
     InterfaceThemeVideoSTART, // add 1
     InterfaceThemeVideoButterfly,
     InterfaceThemeVideoJellyfish,

@@ -9,7 +9,7 @@
         <!--Motion-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="main" title="Motion" contentMode="scaleAspectFill" spacing="0.0" fullScreen="YES" id="AgC-eL-Hgc" userLabel="Motion" customClass="InterfaceController">
+                <controller identifier="main" title="Motion" contentMode="scaleAspectFill" spacing="0.0" fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <inlineMovie alignment="center" verticalAlignment="center" autoplays="NO" id="kVg-oz-Fh4">
                             <gestureRecognizers>
