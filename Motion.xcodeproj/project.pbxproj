@@ -88,6 +88,10 @@
 		FAAC1C07257F24D50020D754 /* NTKVideoPlayerListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKVideoPlayerListing.h; sourceTree = "<group>"; };
 		FAAC1C08257F24E30020D754 /* NTKTimelapseListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTKTimelapseListing.h; sourceTree = "<group>"; };
 		FAAF264D2580307F00A4155E /* NanoTimeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NanoTimeKit.framework; sourceTree = SOURCE_ROOT; };
+		FAAF28992582948E00B7F7AF /* NTKInfinityDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityDataSource.h; path = NanoTimeKit.framework/Headers/NTKInfinityDataSource.h; sourceTree = SOURCE_ROOT; };
+		FAAF289D2582970800B7F7AF /* NTKInfinityListing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityListing.h; path = NanoTimeKit.framework/Headers/NTKInfinityListing.h; sourceTree = SOURCE_ROOT; };
+		FAAF28A1258299DF00B7F7AF /* NTKInfinityStyleEditOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityStyleEditOption.h; path = NanoTimeKit.framework/Headers/EditOptions/NTKInfinityStyleEditOption.h; sourceTree = SOURCE_ROOT; };
+		FAAF28A52582E1C900B7F7AF /* NTKInfinityListingAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NTKInfinityListingAttributes.h; path = NanoTimeKit.framework/Headers/NTKInfinityListingAttributes.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				FA024F98257FD230001A45C8 /* NTKFireWaterColorEditOption.h */,
 				FA024F9C257FD293001A45C8 /* NTKMetallicColorEditOption.h */,
 				FA024FA3257FD30D001A45C8 /* NTKSmokeColorEditOption.h */,
+				FAAF28A1258299DF00B7F7AF /* NTKInfinityStyleEditOption.h */,
 			);
 			path = EditOptions;
 			sourceTree = "<group>";
@@ -167,6 +172,9 @@
 				FAAC1BF8257F242F0020D754 /* NTKAVListing.h */,
 				FAAC1BE6257F06710020D754 /* NTKPhotoAnalysis.h */,
 				FAAC1C07257F24D50020D754 /* NTKVideoPlayerListing.h */,
+				FAAF28A52582E1C900B7F7AF /* NTKInfinityListingAttributes.h */,
+				FAAF289D2582970800B7F7AF /* NTKInfinityListing.h */,
+				FAAF28992582948E00B7F7AF /* NTKInfinityDataSource.h */,
 				FAAC1C08257F24E30020D754 /* NTKTimelapseListing.h */,
 				FAAC1BEB257F23580020D754 /* NTKTimelapseListingFactory.h */,
 				FAAC1BFC257F24500020D754 /* NTKVideoListing.h */,

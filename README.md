@@ -1,6 +1,6 @@
 ## Motion
 
-A watchOS app to view the watch faces with moving backgrounds ("Fire and Water", "Liquid Metal", "Motion", "Timelapse", "Vapor") without the clock overlays.
+A watchOS app to view the watch faces with moving backgrounds ("Fire and Water", "Liquid Metal", "Motion", "Timelapse", "Toy Story", "Vapor") without the clock overlays.
 
 ![Fire](docs/Fire_Fullscreen.gif)
 

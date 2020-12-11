@@ -1,5 +1,5 @@
 digraph Motion {
-    Listing -> {Video, Timelapse, FireWater, Metallic, Smoke}
+    Listing -> {Video, Timelapse, Infinity, FireWater, Metallic, Smoke}
         Video -> {Butterfly, Jellyfish, Flower}
             Butterfly -> "25 variants" -> "4 clips"
             Jellyfish -> "19 variants" -> "1 clip"
@@ -11,6 +11,11 @@ digraph Motion {
             London -> "16 clips"
             Paris -> "17 clips"
             Shanghai -> "22 clips"
+        Infinity -> {Buzz, Woody, Jessie, Supporting}
+            Buzz -> "18 clips"
+            Woody -> "22 clips"
+            Jessie -> "11 clips"
+            Supporting -> "11 clips"
         FireWater -> {Fire, Water}
             Fire -> "2 variants"
             Water -> "2 variants"
