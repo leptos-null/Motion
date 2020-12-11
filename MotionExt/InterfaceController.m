@@ -159,7 +159,7 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             listing = timelapseListing;
             editOption = timelapseEditOption;
         } break;
-            
+            /* from -[NTKAnalogFireWaterFaceView setupDataSources] */
         case InterfaceThemeFireWaterFire: {
             NTKFireWaterColor firewaterColor = theme - InterfaceThemeFireWaterSTART;
             NSString *filename = nil;
@@ -192,7 +192,7 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             listing = [NTKVideoPlayerListing listingForDevice:device withFilename:filename];
             editOption = [NTKFireWaterColorEditOption optionWithColor:firewaterColor forDevice:device];
         } break;
-            
+            /* from -[NTKAnalogMetallicFaceView setupDataSources] */
         case InterfaceThemeMetallicSilver: {
             NTKMetallicColor metallicColor = theme - InterfaceThemeMetallicSTART;
             
@@ -214,7 +214,7 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Metallic_Fullscreen_Rose_003"];
             editOption = [NTKMetallicColorEditOption optionWithColor:metallicColor forDevice:device];
         } break;
-            
+            /* from -[NTKAnalogSmokeFaceView setupDataSources] */
         case InterfaceThemeSmokeBlueGreen: {
             NTKSmokeColor smokeColor = theme - InterfaceThemeSmokeSTART;
             
@@ -236,7 +236,7 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Smoke_Fullscreen_Neutral_007"];
             editOption = [NTKSmokeColorEditOption optionWithColor:smokeColor forDevice:device];
         } break;
-            
+            /* from -[NTKAnalogBreatheFaceView setupDataSources] */
         case InterfaceThemeBreatheClassic: {
             NTKBreatheVideoStyle breatheStyle = theme - (InterfaceThemeBreatheSTART + 1);
             
