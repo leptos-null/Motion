@@ -295,8 +295,18 @@ NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
 - (void)didAppear {
     // inspired by github.com/steventroughtonsmith/SpriteKitWatchFace
     id app = [NSClassFromString(@"UIApplication") valueForKey:@"sharedApplication"];
+    id rootViewController = [app valueForKeyPath:@"keyWindow.rootViewController"];
     id statusbarLayer = [app valueForKeyPath:@"statusBar.layer"];
-    id navbarLayer = [app valueForKeyPath:@"keyWindow.rootViewController.navigationBar.layer"];
+    id navbarLayer = [rootViewController valueForKeyPath:@"navigationBar.layer"];
+    
+    NSArray *childViewControllers = [rootViewController valueForKey:@"childViewControllers"];
+    for (id subview in [childViewControllers.firstObject valueForKeyPath:@"view.subviews"]) {
+        if ([subview isKindOfClass:NSClassFromString(@"PUICPageIndicatorView")]) {
+            // the page indicators, if there are multiple horizontal controllers
+            id subviewLayer = [subview valueForKey:@"layer"];
+            [subviewLayer setOpacity:0];
+        }
+    }
     [statusbarLayer setOpacity:0];
     [navbarLayer setOpacity:0];
     
