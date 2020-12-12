@@ -1,26 +1,55 @@
 digraph Motion {
+    MackLake [ label = "Mack Lake" ]
+    NewYork  [ label = "New York"  ]
+    HongKong [ label = "Hong Kong" ]
+    
+    butterfly_variant_count [ label = "25 variants" ]
+    jellyfish_variant_count [ label = "19 variants" ]
+    flower_variant_count    [ label =  "8 variants" ]
+    
+    butterfly_clip_count [ label = "4 clips" ]
+    jellyfish_clip_count [ label = "1 clip"  ]
+    flower_clip_count    [ label = "1 clip"  ]
+    
+    macklake_clip_count [ label = "22 clips" ]
+    newyork_clip_count  [ label = "20 clips" ]
+    hongkong_clip_count [ label = "26 clips" ]
+    london_clip_count   [ label = "16 clips" ]
+    paris_clip_count    [ label = "17 clips" ]
+    shanghai_clip_count [ label = "22 clips" ]
+    
+    buzz_clip_count       [ label = "18 clips" ]
+    woody_clip_count      [ label = "22 clips" ]
+    jessie_clip_count     [ label = "11 clips" ]
+    supporting_clip_count [ label = "11 clips" ]
+    
+    fire_variant_count  [ label = "2 variants" ]
+    water_variant_count [ label = "2 variants" ]
+    
+    calm_variant_count [ label = "5 variants" ]
+    
     Listing -> {Video, Timelapse, Infinity, FireWater, Metallic, Smoke, Breathe}
         Video -> {Butterfly, Jellyfish, Flower}
-            Butterfly -> "25 variants" -> "4 clips"
-            Jellyfish -> "19 variants" -> "1 clip"
-            Flower -> "8 variants" -> "1 clip"
+            Butterfly -> butterfly_variant_count -> butterfly_clip_count
+            Jellyfish -> jellyfish_variant_count -> jellyfish_clip_count
+            Flower -> flower_variant_count -> flower_clip_count
         Timelapse -> {MackLake, NewYork, HongKong, London, Paris, Shanghai}
-            MackLake -> "22 clips"
-            NewYork -> "20 clips"
-            HongKong -> "26 clips"
-            London -> "16 clips"
-            Paris -> "17 clips"
-            Shanghai -> "22 clips"
+            MackLake -> macklake_clip_count
+            NewYork -> newyork_clip_count
+            HongKong -> hongkong_clip_count
+            London -> london_clip_count
+            Paris -> paris_clip_count
+            Shanghai -> shanghai_clip_count
         Infinity -> {Buzz, Woody, Jessie, Supporting}
-            Buzz -> "18 clips"
-            Woody -> "22 clips"
-            Jessie -> "11 clips"
-            Supporting -> "11 clips"
+            Buzz -> buzz_clip_count
+            Woody -> woody_clip_count
+            Jessie -> jessie_clip_count
+            Supporting -> supporting_clip_count
         FireWater -> {Fire, Water}
-            Fire -> "2 variants"
-            Water -> "2 variants"
+            Fire -> fire_variant_count
+            Water -> water_variant_count
         Metallic -> {Silver, Black, Gold}
         Smoke -> {"Blue/Green", "Pink/Orange", "Black/White"}
         Breathe -> {Classic, Calm, Focus}
-            Calm -> "5 variants"
+            Calm -> calm_variant_count
 }
