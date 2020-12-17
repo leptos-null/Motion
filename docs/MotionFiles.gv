@@ -1,0 +1,65 @@
+digraph Motion {
+    MackLake [ label = "Mack Lake" ]
+    NewYork  [ label = "New York"  ]
+    HongKong [ label = "Hong Kong" ]
+    
+    Listing -> {Video, Timelapse, Infinity, FireWater, Metallic, Smoke, Breathe}
+        Video -> {Butterfly, Jellyfish, Flower}
+            Butterfly -> {Amphitryon, Apallonia, Atlas, Beatifica, Blumei, Dido, Doubledayi, Excelsior, Hypermnestra, Idaeoides, Lorquinianus, Lechenaulti, Leucippe, Limborgii, Luna, Menelaus, Myrina, Paradisea, Rhadama, Ripheus, Rurina, Sangaris, Sylvia, Timorensis, Weiskei}
+                Menelaus -> {"03-M-Menelaus-H264-A", "03-M-Menelaus-H264-B", "03-M-Menelaus-H264-E", "03-M-Menelaus-H264-F"}
+                Dido -> {"23-P-Dido-H264-A", "23-P-Dido-H264-B", "23-P-Dido-H264-E", "23-P-Dido-H264-F"}
+                Blumei -> {"01-P-Blumei-H264-A", "01-P-Blumei-H264-B", "01-P-Blumei-H264-E", "01-P-Blumei-H264-F"}
+                Weiskei -> {"11-G-Weiskei-H264-A", "11-G-Weiskei-H264-B", "11-G-Weiskei-H264-E", "11-G-Weiskei-H264-F"}
+                Doubledayi -> {"24-Z-Doubledayi-H264-A", "24-Z-Doubledayi-H264-B", "24-Z-Doubledayi-H264-E", "24-Z-Doubledayi-H264-F"}
+                Ripheus -> {"15-U-Ripheus-H264-A", "15-U-Ripheus-H264-B", "15-U-Ripheus-H264-E", "15-U-Ripheus-H264-F"}
+                Amphitryon -> {"16-M-Amphitryon-H264-A", "16-M-Amphitryon-H264-B", "16-M-Amphitryon-H264-E", "16-M-Amphitryon-H264-F"}
+                Apallonia -> {"22-L-Apallonia-H264-A", "22-L-Apallonia-H264-B", "22-L-Apallonia-H264-E", "22-L-Apallonia-H264-F"}
+                Beatifica -> {"09-A-Beatifica-H264-A", "09-A-Beatifica-H264-B", "09-A-Beatifica-H264-E", "09-A-Beatifica-H264-F"}
+                Leucippe -> {"12-H-Leucippe-H264-A", "12-H-Leucippe-H264-B", "12-H-Leucippe-H264-E", "12-H-Leucippe-H264-F"}
+                Myrina -> {"14-C-Myrina-H264-A", "14-C-Myrina-H264-B", "14-C-Myrina-H264-E", "14-C-Myrina-H264-F"}
+                Timorensis -> {"18-D-Timorensis-H264-A", "18-D-Timorensis-H264-B", "18-D-Timorensis-H264-E", "18-D-Timorensis-H264-F"}
+                Rhadama -> {"07-J-Rhadama-H264-A", "07-J-Rhadama-H264-B", "07-J-Rhadama-H264-E", "07-J-Rhadama-H264-F"}
+                Idaeoides -> {"08-I-Idaeoides-H264-A", "08-I-Idaeoides-H264-B", "08-I-Idaeoides-H264-E", "08-I-Idaeoides-H264-F"}
+                Sangaris -> {"17-C-Sangaris-H264-A", "17-C-Sangaris-H264-B", "17-C-Sangaris-H264-E", "17-C-Sangaris-H264-F"}
+                Paradisea -> {"04-O-Paradisea-H264-A", "04-O-Paradisea-H264-B", "04-O-Paradisea-H264-E", "04-O-Paradisea-H264-F"}
+                Lorquinianus -> {"25-P-Lorquinianus-H264-A", "25-P-Lorquinianus-H264-B", "25-P-Lorquinianus-H264-E", "25-P-Lorquinianus-H264-F"}
+                Hypermnestra -> {"21-I-Hypermnestra-H264-A", "21-I-Hypermnestra-H264-B", "21-I-Hypermnestra-H264-E", "21-I-Hypermnestra-H264-F"}
+                Sylvia -> {"13-P-Sylvia-H264-A", "13-P-Sylvia-H264-B", "13-P-Sylvia-H264-E", "13-P-Sylvia-H264-F"}
+                Rurina -> {"19-P-Rurina-H264-A", "19-P-Rurina-H264-B", "19-P-Rurina-H264-E", "19-P-Rurina-H264-F"}
+                Atlas -> {"06-A-Atlas-H264-A", "06-A-Atlas-H264-B", "06-A-Atlas-H264-E", "06-A-Atlas-H264-F"}
+                Luna -> {"02-A-Luna-H264-A", "02-A-Luna-H264-B", "02-A-Luna-H264-E", "02-A-Luna-H264-F"}
+                Limborgii -> {"05-K-Limborgii-H264-A", "05-K-Limborgii-H264-B", "05-K-Limborgii-H264-E", "05-K-Limborgii-H264-F"}
+                Excelsior -> {"20-C-Excelsior-H264-A", "20-C-Excelsior-H264-B", "20-C-Excelsior-H264-E", "20-C-Excelsior-H264-F"}
+                Lechenaulti -> {"10-C-Lechenaulti-H264-A", "10-C-Lechenaulti-H264-B", "10-C-Lechenaulti-H264-E", "10-C-Lechenaulti-H264-F"}
+                
+            Jellyfish -> {"01-Cyndaria", "02-Cyndaria", "03-Cyndaria", "04-Cyndaria", "05-Lions-Mane", "06-Lions-Mane-alt", "06-Lions-Mane", "07-Lions-Mane", "08-Nettle", "09-Nettle", "10-Moon", "11-Moon", "12-Moon", "14-Root-Mouth", "16-Root-Mouth", "17-Blueblubber", "18-Blueblubber", "19-Moon", "21-Moon"}
+            Flower -> {"CHRYSANTHEMUM", "GARDENIA", "PINK-DAHLIA", "PINK-PEONY", "PURPLE-PASSION", "WHITE-NIGELLA", "WILDFLOWER", "YELLOW-POPPY"}
+        Timelapse -> {MackLake, NewYork, HongKong, London, Paris, Shanghai}
+            MackLake -> {"timelapse-MackLake-001", "timelapse-MackLake-002", "timelapse-MackLake-003", "timelapse-MackLake-004", "timelapse-MackLake-005", "timelapse-MackLake-006", "timelapse-MackLake-007", "timelapse-MackLake-008", "timelapse-MackLake-009", "timelapse-MackLake-010", "timelapse-MackLake-011", "timelapse-MackLake-012", "timelapse-MackLake-013", "timelapse-MackLake-014", "timelapse-MackLake-015", "timelapse-MackLake-016", "timelapse-MackLake-017", "timelapse-MackLake-018", "timelapse-MackLake-019", "timelapse-MackLake-020", "timelapse-MackLake-021", "timelapse-MackLake-022"}
+            NewYork -> {"timelapse-NewYork-001", "timelapse-NewYork-002", "timelapse-NewYork-003", "timelapse-NewYork-004", "timelapse-NewYork-005", "timelapse-NewYork-006", "timelapse-NewYork-007", "timelapse-NewYork-008", "timelapse-NewYork-009", "timelapse-NewYork-010", "timelapse-NewYork-011", "timelapse-NewYork-012", "timelapse-NewYork-013", "timelapse-NewYork-014", "timelapse-NewYork-015", "timelapse-NewYork-016", "timelapse-NewYork-017", "timelapse-NewYork-018", "timelapse-NewYork-019", "timelapse-NewYork-020"}
+            HongKong -> {"timelapse-HongKong-001", "timelapse-HongKong-002", "timelapse-HongKong-003", "timelapse-HongKong-004", "timelapse-HongKong-005", "timelapse-HongKong-006", "timelapse-HongKong-007", "timelapse-HongKong-008", "timelapse-HongKong-009", "timelapse-HongKong-010", "timelapse-HongKong-011", "timelapse-HongKong-012", "timelapse-HongKong-013", "timelapse-HongKong-014", "timelapse-HongKong-015", "timelapse-HongKong-016", "timelapse-HongKong-017", "timelapse-HongKong-018", "timelapse-HongKong-019", "timelapse-HongKong-020", "timelapse-HongKong-021", "timelapse-HongKong-022", "timelapse-HongKong-023", "timelapse-HongKong-024", "timelapse-HongKong-025", "timelapse-HongKong-026"}
+            London -> {"timelapse-London-001", "timelapse-London-002", "timelapse-London-003", "timelapse-London-004", "timelapse-London-005", "timelapse-London-006", "timelapse-London-007", "timelapse-London-008", "timelapse-London-009", "timelapse-London-010", "timelapse-London-011", "timelapse-London-012", "timelapse-London-013", "timelapse-London-014", "timelapse-London-015", "timelapse-London-016"}
+            Paris -> {"timelapse-Paris-001", "timelapse-Paris-002", "timelapse-Paris-003", "timelapse-Paris-004", "timelapse-Paris-005", "timelapse-Paris-006", "timelapse-Paris-007", "timelapse-Paris-008", "timelapse-Paris-009", "timelapse-Paris-010", "timelapse-Paris-011", "timelapse-Paris-012", "timelapse-Paris-013", "timelapse-Paris-014", "timelapse-Paris-015", "timelapse-Paris-016", "timelapse-Paris-017"}
+            Shanghai -> {"timelapse-Shanghai-001", "timelapse-Shanghai-002", "timelapse-Shanghai-003", "timelapse-Shanghai-004", "timelapse-Shanghai-005", "timelapse-Shanghai-006", "timelapse-Shanghai-007", "timelapse-Shanghai-008", "timelapse-Shanghai-009", "timelapse-Shanghai-010", "timelapse-Shanghai-011", "timelapse-Shanghai-012", "timelapse-Shanghai-013", "timelapse-Shanghai-014", "timelapse-Shanghai-015", "timelapse-Shanghai-016", "timelapse-Shanghai-017", "timelapse-Shanghai-018", "timelapse-Shanghai-019", "timelapse-Shanghai-020", "timelapse-Shanghai-021", "timelapse-Shanghai-022"}
+        Infinity -> {Buzz, Woody, Jessie, Supporting}
+            Buzz -> {"Infinity_Buzz_ball", "Infinity_Buzz_behind NIGHT", "Infinity_Buzz_behind", "Infinity_Buzz_glass knock", "Infinity_Buzz_glass salute", "Infinity_Buzz_laser", "Infinity_Buzz_look up and leave", "Infinity_Buzz_look up", "Infinity_Buzz_loop", "Infinity_Buzz_run NIGHT", "Infinity_Buzz_run", "Infinity_Buzz_wall NIGHT", "Infinity_Buzz_wall", "Infinity_Buzz_wings pop", "Infinity_Buzz_wrist", "Infinity_Buzz_zoom look up and leave", "Infinity_Buzz_zoom look up", "Infinity_Buzz_zoom loop"}
+            Woody -> {"Infinity_Woody_Buzz drags off NIGHT", "Infinity_Woody_Buzz drags off", "Infinity_Woody_behind NIGHT", "Infinity_Woody_behind", "Infinity_Woody_big wave", "Infinity_Woody_hat", "Infinity_Woody_kick", "Infinity_Woody_kite", "Infinity_Woody_look up", "Infinity_Woody_loop", "Infinity_Woody_outro", "Infinity_Woody_point", "Infinity_Woody_run NIGHT", "Infinity_Woody_run", "Infinity_Woody_small wave", "Infinity_Woody_wall NIGHT", "Infinity_Woody_wall", "Infinity_Woody_zoom hat", "Infinity_Woody_zoom look up", "Infinity_Woody_zoom loop", "Infinity_Woody_zoom point", "Infinity_Woody_zoom small wave"}
+            Jessie -> {"Infinity_Jessie_Bullseye & Ball", "Infinity_Jessie_bullseye", "Infinity_Jessie_flexing", "Infinity_Jessie_hat", "Infinity_Jessie_look up", "Infinity_Jessie_loop", "Infinity_Jessie_outro", "Infinity_Jessie_thumbs up", "Infinity_Jessie_zoom look up", "Infinity_Jessie_zoom loop", "Infinity_Jessie_zoom thumbs up"}
+            Supporting -> {"Infinity_Supporting_Alien bounce", "Infinity_Supporting_Bullseye happy", "Infinity_Supporting_Buzz & Woody behind NIGHT", "Infinity_Supporting_Buzz & Woody top-down NIGHT", "Infinity_Supporting_Buzz & Woody top-down", "Infinity_Supporting_Hamm side NIGHT", "Infinity_Supporting_Hamm side", "Infinity_Supporting_Hamm wiggle", "Infinity_Supporting_Rex side NIGHT", "Infinity_Supporting_Rex side", "Infinity_Supporting_Rex wave"}
+        
+        FireWater -> {Fire, Water}
+            Fire -> {"Fire_Fullscreen_008", "Fire_Fullscreen_008_Calm"}
+            Water -> {"Water_Fullscreen_005", "Water_Fullscreen_005_Edge"}
+        Metallic -> {Silver, Black, Gold}
+            Silver -> {"Metallic_Fullscreen_Silver_003"}
+            Black -> {"Metallic_Fullscreen_GunMetal_003"}
+            Gold -> {"Metallic_Fullscreen_Rose_003"}
+        Smoke -> {"Blue/Green", "Pink/Orange", "Black/White"}
+            "Blue/Green" -> {"Smoke_Fullscreen_Spearmint_007"}
+            "Pink/Orange" -> {"Smoke_Fullscreen_Citrus_007"}
+            "Black/White" -> {"Smoke_Fullscreen_Neutral_007"}
+        Breathe -> {Classic, Calm, Focus}
+            Classic -> {"Breathe_Flower"}
+            Calm -> {"Breathe_Bokeh_01", "Breathe_Bokeh_02", "Breathe_Bokeh_03", "Breathe_Bokeh_04", "Breathe_Bokeh_05"}
+            Focus -> {"Breathe_Rings"}
+}
