@@ -22,13 +22,11 @@
 
 FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name, CLKDevice *device);
 
-NS_INLINE NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
-    if (x < min) {
-        return max;
-    }
-    if (x > max) {
-        return min;
-    }
+NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
+    NSInteger range = max - min + 1;
+    x -= min;
+    x %= range;
+    x += min;
     return x;
 }
 
