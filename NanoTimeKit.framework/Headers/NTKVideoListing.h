@@ -27,6 +27,8 @@ typedef NS_ENUM(NSUInteger, NTKVideoTheme) {
 
 @property (readonly, nonatomic) UIColor *overlayColor;
 
+- (instancetype)initForDevice:(CLKDevice *)device withName:(NSString *)name videoName:(NSString *)videoName transitionImageName:(NSString *)transitionImageName overlayColor:(UIColor *)overlayColor theme:(NTKVideoTheme)theme variant:(NSInteger)variant clip:(NSInteger)clip tags:(NSUInteger)tags;
+
 // return (tags & tag) == tag
 // known tags:
 //   100

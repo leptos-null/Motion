@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, NTKInfinityType) {
     NTKInfinityTypeE, // everything else (all characters)
 };
 
-// based on NTKInfinityFaceView.videoPlayerViewDidPauseAfterPlayingVideoToEnd behavior
+// based on -[NTKInfinityFaceView videoPlayerViewDidPauseAfterPlayingVideoToEnd:] behavior
 typedef NS_ENUM(NSUInteger, NTKInfinityPlayback) {
     NTKInfinityPlaybackNext, // play next
     NTKInfinityPlaybackFade, // fade out

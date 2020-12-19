@@ -47,20 +47,20 @@ OBJC_EXTERN NSString *NSStringFromNTKInfinityCharacterType(NTKInfinityCharacterT
 
 /* my reverse engineered implementation of _makeInfinityListingWithPlayback to better understand Infinity components
  *
- * NTKInfinityListing *_makeInfinityListingWithPlayback(NTKInfinityCharacter character, NSString *subname, NTKInfinityType type, UIColor *color,
+ * NTKInfinityListing *_makeInfinityListingWithPlayback(NTKInfinityCharacterType character, NSString *subname, NTKInfinityType type, UIColor *color,
  *                                                      NSUInteger crop, NSUInteger setting, NTKInfinityPlayback playback, CLKDevice *device) {
  *     NSString *characterName = nil;
  *     switch (character) {
- *         case NTKInfinityCharacterBuzz:
+ *         case NTKInfinityCharacterTypeBuzz:
  *             characterName = @"Buzz";
  *             break;
- *         case NTKInfinityCharacterWoody:
+ *         case NTKInfinityCharacterTypeWoody:
  *             characterName = @"Woody";
  *             break;
- *         case NTKInfinityCharacterJessie:
+ *         case NTKInfinityCharacterTypeJessie:
  *             characterName = @"Jessie";
  *             break;
- *         case NTKInfinityCharacterSupporting:
+ *         case NTKInfinityCharacterTypeSupporting:
  *             characterName = @"Supporting";
  *             break;
  *     }
@@ -84,4 +84,24 @@ OBJC_EXTERN NSString *NSStringFromNTKInfinityCharacterType(NTKInfinityCharacterT
  *
  *     return listing;
  * }
+ */
+
+/* my reverse engineered implementation of _makeInfinityListing to better understand Infinity components
+ *
+ * NTKInfinityListing *_makeInfinityListing(NTKInfinityCharacterType character, NSString *subname, NTKInfinityType type, UIColor *color,
+ *                                          NSUInteger crop, NSUInteger setting, CLKDevice *device) {
+ *     NTKInfinityPlayback playback = NTKInfinityPlaybackLoop;
+ *     NSUInteger lookupIndex = character - 1;
+ *     if (lookupIndex < 4) {
+ *         NTKInfinityPlayback playbackLookup[4] = {
+ *             NTKInfinityPlaybackNext,
+ *             NTKInfinityPlaybackFade,
+ *             NTKInfinityPlaybackFade,
+ *             NTKInfinityPlaybackFade,
+ *         };
+ *         playback = playbackLookup[lookupIndex];
+ *     }
+ *     return _makeInfinityListingWithPlayback(character, subname, type, color, crop, setting, playback, device);
+ * }
+ *
  */

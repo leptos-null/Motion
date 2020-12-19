@@ -7,7 +7,7 @@
 
 #import <NanoTimeKit/NTKAVListing.h>
 
-// based on NTKVideoPlayerView.videoPlayerViewDidPauseAfterPlayingVideoToEnd behavior
+// based on -[NTKVideoFaceView videoPlayerViewDidPauseAfterPlayingVideoToEnd:] behavior
 typedef NS_ENUM(NSUInteger, NTKVideoEndBehavior) {
     NTKVideoEndBehaviorNext, // play next
     NTKVideoEndBehaviorFade, // fade out
