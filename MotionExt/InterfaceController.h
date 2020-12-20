@@ -45,6 +45,13 @@ typedef NS_ENUM(NSUInteger, InterfaceTheme) {
     InterfaceThemeBreatheClassic,
     InterfaceThemeBreatheCalm,
     InterfaceThemeBreatheFocus,
+    
+    InterfaceThemeInfinitySTART, // add 1 for NTKInfinityCharacterType
+    InterfaceThemeInfinityToyBox = InterfaceThemeInfinitySTART, // don't add 1 for NTKInfinityStyle
+    InterfaceThemeInfinityBuzz,
+    InterfaceThemeInfinityWoody,
+    InterfaceThemeInfinityJessie,
+    InterfaceThemeInfinitySupporting,
 };
 
 @interface InterfaceController : WKInterfaceController

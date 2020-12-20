@@ -10,6 +10,7 @@
 
 #import <NanoTimeKit/NTKTimelapseListingFactory.h>
 #import <NanoTimeKit/NTKVideoListingFactory.h>
+#import <NanoTimeKit/NTKInfinityDataSource.h>
 
 #import <NanoTimeKit/NTKVideoPlayerListing.h>
 
@@ -19,6 +20,7 @@
 #import <NanoTimeKit/EditOptions/NTKMetallicColorEditOption.h>
 #import <NanoTimeKit/EditOptions/NTKSmokeColorEditOption.h>
 #import <NanoTimeKit/EditOptions/NTKBreatheVideoStyleEditOption.h>
+#import <NanoTimeKit/EditOptions/NTKInfinityStyleEditOption.h>
 
 FOUNDATION_EXTERN UIImage *NTKImageNamedFromAssetsBundleForDevice(NSString *name, CLKDevice *device);
 
@@ -30,8 +32,16 @@ NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
     return x;
 }
 
-@implementation InterfaceController
+@implementation InterfaceController {
+    NTKInfinityDataSource *_infinityDataSource;
+}
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _infinityDataSource = [[NTKInfinityDataSource alloc] initForDevice:[CLKDevice currentDevice]];
+    }
+    return self;
+}
 - (void)awakeWithContext:(NSNumber *)context {
     self.theme = context.unsignedIntegerValue;
 }
@@ -47,7 +57,9 @@ NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
     if (variant == self.variant) {
         return;
     }
-    switch (self.theme) {
+    
+    InterfaceTheme const theme = self.theme;
+    switch (theme) {
         case InterfaceThemeVideoButterfly:
             variant = NSIntegerRotate(1, variant, 25);
             break;
@@ -85,6 +97,15 @@ NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
         case InterfaceThemeBreatheCalm:
             variant = NSIntegerRotate(1, variant, 5);
             break;
+            
+        case InterfaceThemeInfinityBuzz:
+        case InterfaceThemeInfinityWoody:
+        case InterfaceThemeInfinityJessie:
+        case InterfaceThemeInfinitySupporting: {
+            NTKInfinityCharacterType characterType = theme - (InterfaceThemeInfinitySTART + 1);
+            NSArray<NTKInfinityListing *> *characterListings = [_infinityDataSource listingsForCharacter:characterType];
+            variant = NSIntegerRotate(0, variant, characterListings.count - 1);
+        } break;
             
         default:
             variant = 1;
@@ -279,6 +300,47 @@ NSInteger NSIntegerRotate(NSInteger min, NSInteger x, NSInteger max) {
             posterImage = NTKImageNamedFromAssetsBundleForDevice(@"PosterImage-Breathe-Rings", device);
             listing = [NTKVideoPlayerListing listingForDevice:device withFilename:@"Breathe_Rings"];
             editOption = [NTKBreatheVideoStyleEditOption optionWithStyle:breatheStyle forDevice:device];
+        } break;
+            
+        case InterfaceThemeInfinityBuzz: {
+            NTKInfinityCharacterType characterType = theme - (InterfaceThemeInfinitySTART + 1);
+            NTKInfinityStyle infinityStyle = theme - InterfaceThemeInfinitySTART;
+            
+            NSArray<NTKInfinityListing *> *characterListings = [_infinityDataSource listingsForCharacter:characterType];
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"Infinity_BuzzPosterImage", device);
+            listing = characterListings[variant];
+            editOption = [NTKInfinityStyleEditOption optionWithStyle:infinityStyle forDevice:device];
+        } break;
+        case InterfaceThemeInfinityWoody: {
+            NTKInfinityCharacterType characterType = theme - (InterfaceThemeInfinitySTART + 1);
+            NTKInfinityStyle infinityStyle = theme - InterfaceThemeInfinitySTART;
+            
+            NSArray<NTKInfinityListing *> *characterListings = [_infinityDataSource listingsForCharacter:characterType];
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"Infinity_WoodyPosterImage", device);
+            listing = characterListings[variant];
+            editOption = [NTKInfinityStyleEditOption optionWithStyle:infinityStyle forDevice:device];
+        } break;
+        case InterfaceThemeInfinityJessie: {
+            NTKInfinityCharacterType characterType = theme - (InterfaceThemeInfinitySTART + 1);
+            NTKInfinityStyle infinityStyle = theme - InterfaceThemeInfinitySTART;
+            
+            NSArray<NTKInfinityListing *> *characterListings = [_infinityDataSource listingsForCharacter:characterType];
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"Infinity_JessiePosterImage", device);
+            listing = characterListings[variant];
+            editOption = [NTKInfinityStyleEditOption optionWithStyle:infinityStyle forDevice:device];
+        } break;
+        case InterfaceThemeInfinitySupporting: {
+            NTKInfinityCharacterType characterType = theme - (InterfaceThemeInfinitySTART + 1);
+            NTKInfinityStyle infinityStyle = NTKInfinityStyleToyBox;
+            
+            NSArray<NTKInfinityListing *> *characterListings = [_infinityDataSource listingsForCharacter:characterType];
+            
+            posterImage = NTKImageNamedFromAssetsBundleForDevice(@"Infinity_ToyboxPosterImage", device);
+            listing = characterListings[variant];
+            editOption = [NTKInfinityStyleEditOption optionWithStyle:infinityStyle forDevice:device];
         } break;
             
         default:

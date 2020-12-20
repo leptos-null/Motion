@@ -38,6 +38,11 @@
         @(InterfaceThemeBreatheClassic),
         @(InterfaceThemeBreatheCalm),
         @(InterfaceThemeBreatheFocus),
+        
+        @(InterfaceThemeInfinityBuzz),
+        @(InterfaceThemeInfinityWoody),
+        @(InterfaceThemeInfinityJessie),
+        @(InterfaceThemeInfinitySupporting),
     ];
     
     NSUInteger contextCount = contexts.count;
